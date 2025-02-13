@@ -57,8 +57,8 @@ export function generateRandomDm() {
     return num < 8
       ? `${greeting}，${getRandomItem(messageArray)}`
       : num === 9
-      ? `${greeting}${getRandomItem(['', '啊', '呀', '呢', '啦', '嘛', '吧', '哦', '哇', '呗'])}`
-      : `${getRandomItem(['大家', '各位', '兄弟们', '姐妹们', '朋友们', ''])}${greeting}`;
+        ? `${greeting}${getRandomItem(['', '啊', '呀', '呢', '啦', '嘛', '吧', '哦', '哇', '呗'])}`
+        : `${getRandomItem(['大家', '各位', '兄弟们', '姐妹们', '朋友们', ''])}${greeting}`;
   }
   // 如果是 5 - 8，返回随机表情
   if (num <= 9) {

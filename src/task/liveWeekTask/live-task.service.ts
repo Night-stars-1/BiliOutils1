@@ -32,14 +32,17 @@ export async function liveWeekTaskService() {
 
   await linkService((stopRef, timeout) => {
     // 任务超时
-    const timer = setInterval(async () => {
-      if (await getTaskStatus()) {
-        stopRef.value = true;
-        clearTimeout(timeout);
-        clearInterval(timer);
-        logger.info('任务已完成');
-      }
-    }, 3 * 70 * 1000);
+    const timer = setInterval(
+      async () => {
+        if (await getTaskStatus()) {
+          stopRef.value = true;
+          clearTimeout(timeout);
+          clearInterval(timer);
+          logger.info('任务已完成');
+        }
+      },
+      3 * 70 * 1000,
+    );
   });
 
   try {

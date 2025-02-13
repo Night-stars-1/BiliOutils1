@@ -165,8 +165,8 @@ function showEmptyBagTip<T = LiveGiftBag>(gifts?: T[]): gifts is undefined {
         ? `背包没有${EXPIRE_DATE}天内过期的礼物！`
         : `背包没有任何礼物！`
       : expire
-      ? `没有${EXPIRE_DATE}天内过期的简单礼物！`
-      : `背包没有简单礼物！`,
+        ? `没有${EXPIRE_DATE}天内过期的简单礼物！`
+        : `背包没有简单礼物！`,
   );
   return true;
 }
